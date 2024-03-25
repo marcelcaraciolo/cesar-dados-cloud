@@ -1,7 +1,24 @@
 
-# Welcome to your CDK Python project!
+# Projeto Computação em Nuvem - 2023.1 
+## Aluno: Marcel Pinheiro Caraciolo (mpc3@cesar.school)
 
-This is a blank project for CDK development with Python.
+
+# Projeto
+Este projeto consiste no uso das tecnologias S3, Athena e Glue provisionadas por meio da tecnologia CDK Toolkit em Python na AWS.
+
+## Arquitetura
+
+- Ao provisionar o ambiente em CDK já realizamos o upload dos 2 arquivos de base de dados da empresa fictícia 5GFlix na zona **landing** em um bucket no S3.
+- Temos um Job Glue provisionado para realizar as tarefas de pré-processamento dos dados (limpeza, extração de colunas, e armazenamento em formato parquet).
+- Os dados processados são armazenados em parquet na zona **transformada** em um bucket no S3.
+- Temos um job Crawler Glue que realiza o mapeamento e inferência das base de dados e armazena os dados em um database para consultas futuras em Athena.
+- Temos um workspace no Athena com consultas em SQL mapeadas para respostas de análise das perguntas solicitadas pela gestão do 5GFlix (objetivo do exercício).
+
+
+
+
+
+## Como executar
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
