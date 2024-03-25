@@ -39,7 +39,7 @@ Este projeto consiste no uso das tecnologias S3, Athena e Glue provisionadas por
 
 ## Evidências Consultas
 
-
+### Quantos filmes estão disponíveis no dataset?
 
 ## Como executar
 
