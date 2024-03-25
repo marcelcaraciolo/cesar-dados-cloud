@@ -15,6 +15,7 @@ Este projeto consiste no uso das tecnologias S3, Athena e Glue provisionadas por
 - Temos um workspace no Athena com consultas em SQL mapeadas para respostas de análise das perguntas solicitadas pela gestão do 5GFlix (objetivo do exercício).
 
 
+![Projeto Infra-Cloud drawio](https://github.com/marcelcaraciolo/cesar-dados-cloud/assets/275084/95b855a3-24d0-4cac-8927-b3218629f918)
 
 
 
