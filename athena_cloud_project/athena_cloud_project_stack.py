@@ -193,8 +193,8 @@ class AthenaCloudProjectStack(Stack):
             name="query-12",
             query_string='SELECT "5gflix-database"."movies".movie, avg(rating) as rating_avg FROM "5gflix-database"."ratings" left join "5gflix-database"."movies" on "5gflix-database"."ratings".movie_id = "5gflix-database"."movies".movie_id group by "5gflix-database"."movies".movie order by avg(rating) desc limit 5',
         )
-        
-        #pergunta 1.3
+
+        # pergunta 1.3
         query_13 = athena.CfnNamedQuery(
             self,
             "query-13",
@@ -203,17 +203,17 @@ class AthenaCloudProjectStack(Stack):
             name="query-13",
             query_string='SELECT year, count(*) as total_launches from "5gflix-database"."movies" group by year order by total_launches asc limit 9',
         )
-        
-        #pergunta 1.4
+
+        # pergunta 1.4
         query_14 = athena.CfnNamedQuery(
             self,
             "query-14",
             database=glue_database.database_input.name,
             work_group=work_group.name,
             name="query-14",
-            query_string='SELECT "5gflix-database"."ratings".cust_id, count(*) as total_eval  FROM "5gflix-database"."ratings"  group by "5gflix-database"."ratings".cust_id  order by total_eval desc limit 5',
+            query_string='select count(distinct movie_id) as total from "5gflix-database"."ratings" where date in (SELECT  max(date) FROM "5gflix-database"."ratings") AND rating >= 4.7',
         )
-        
+
         # pergunta 1.5
         query_15 = athena.CfnNamedQuery(
             self,
@@ -223,8 +223,6 @@ class AthenaCloudProjectStack(Stack):
             name="query-15",
             query_string='SELECT "5gflix-database"."ratings".cust_id, count(*) as total_eval  FROM "5gflix-database"."ratings"  group by "5gflix-database"."ratings".cust_id  order by total_eval desc limit 5',
         )
-
-
 
         # adjusting the resource creation order
         query_11.add_dependency(work_group)
