@@ -40,6 +40,88 @@ Este projeto consiste no uso das tecnologias S3, Athena e Glue provisionadas por
 ## Evidências Consultas
 
 ### Quantos filmes estão disponíveis no dataset?
+<img width="997" alt="Captura de Tela 2024-03-25 às 15 27 19" src="https://github.com/marcelcaraciolo/cesar-dados-cloud/assets/275084/19d611da-5a78-4d5b-8d1f-d240420a173d">
+4499 filmes
+
+### Qual é o nome dos 5 filmes com melhor média de avaliação?
+<img width="1153" alt="Captura de Tela 2024-03-25 às 15 28 47" src="https://github.com/marcelcaraciolo/cesar-dados-cloud/assets/275084/464a5e35-495d-45aa-8a96-3ae73b2d538e">
+
+
+1	
+Lost: Season 1, 2004
+4.6709891019450955
+2	
+Ghost in the Shell: Stand Alone Complex: 2nd Gig, 2005
+4.586363636363636
+3	
+The Simpsons: Season 6, 1994
+4.581295988606693
+4	
+Inu-Yasha, 2000
+4.554434413170473
+5	
+Lord of the Rings: The Return of the King: Extended Edition: Bonus Material, 2003
+4.552
+
+### Quais os 9 anos com menos lançamentos de filmes?
+![image](https://github.com/marcelcaraciolo/cesar-dados-cloud/assets/275084/708a691a-f52e-4a67-911d-ceb37695534b)
+
+year
+total_launches
+1	
+1922
+1
+2	
+1926
+1
+3	
+1917
+1
+4	
+1915
+1
+5	
+1924
+2
+6	
+1918
+2
+7	
+1916
+2
+8	
+1929
+2
+9	
+1931
+2
+
+### Quantos filmes que possuem avaliação maior ou igual a 4.7, considerando apenas os filmes avaliados na última data de avaliação do dataset?
+<img width="1005" alt="Captura de Tela 2024-03-25 às 15 32 55" src="https://github.com/marcelcaraciolo/cesar-dados-cloud/assets/275084/9653db28-dfe8-4c19-a8bf-a655e72ad007">
+
+780 filmes
+
+### Quais os id's dos 5 customers que mais avaliaram filmes e quantas avaliações cada um fez?
+<img width="1135" alt="Captura de Tela 2024-03-25 às 15 34 37" src="https://github.com/marcelcaraciolo/cesar-dados-cloud/assets/275084/5fc95f3e-17ef-4741-bf5c-5ada72815b74">
+
+cust_id
+total_eval
+1	
+305344
+4467
+2	
+387418
+4422
+3	
+2439493
+4195
+4	
+1664010
+4019
+5	
+2118461
+3769
+
 
 ## Como executar
 
